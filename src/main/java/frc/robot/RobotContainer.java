@@ -29,44 +29,35 @@ public class RobotContainer {
   private Rotator m_Rotator = new Rotator();
 
   // Commands
-  private Command intakeIn = new StartEndCommand(
+  private Command intake_cmd = new StartEndCommand(
   () -> {
-    m_Intake.spin(INTAKE_IN_SPD);
-  }, () -> {
-    m_Intake.spin(0);
-  }, m_Intake);
-  
-  private Command intakeOut = new StartEndCommand(
-  () -> {
-    m_Intake.spin(INTAKE_OUT_SPD);
+    if (JOY0.getRawButtonPressed(REVERSE_BUTTON)) {
+      m_Intake.spin(INTAKE_OUT_SPD);
+    } else {
+      m_Intake.spin(INTAKE_IN_SPD);
+    }
   }, () -> {
     m_Intake.spin(0);
   }, m_Intake);
 
-  private Command rotator1 = new StartEndCommand(
+  private Command rotator_cmd = new StartEndCommand(
   () -> {
-    m_Rotator.rotate(ROTATOR_SPD1);
-  }, () -> {
-    m_Rotator.rotate(0);
-  }, m_Rotator);
-  
-  private Command rotator2 = new StartEndCommand(
-  () -> {
-    m_Rotator.rotate(ROTATOR_SPD2);
+    if (JOY0.getRawButtonPressed(REVERSE_BUTTON)) {
+      m_Rotator.rotate(ROTATOR_SPD2);
+    } else {
+      m_Rotator.rotate(ROTATOR_SPD1);
+    }
   }, () -> {
     m_Rotator.rotate(0);
   }, m_Rotator);
 
-  private Command flywheelIn = new StartEndCommand(
+  private Command flywheel_cmd = new StartEndCommand(
   () -> {
-    m_Flywheel.spin(ROTATOR_SPD1);
-  }, () -> {
-    m_Flywheel.spin(0);
-  }, m_Flywheel);
-  
-  private Command flywheelOut = new StartEndCommand(
-  () -> {
-    m_Flywheel.spin(ROTATOR_SPD2);
+    if (JOY0.getRawButtonPressed(REVERSE_BUTTON)) {
+      m_Flywheel.spin(FLYWHEEL_OUT);
+    } else {
+      m_Flywheel.spin(FLYWHEEL_IN);
+    }
   }, () -> {
     m_Flywheel.spin(0);
   }, m_Flywheel);
@@ -87,12 +78,9 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    new JoystickButton(JOY0, INTAKE_IN_BUTTON).whileTrue(intakeIn);
-    new JoystickButton(JOY0, INTAKE_OUT_BUTTON).whileTrue(intakeOut);
-    new JoystickButton(JOY0, FLYWHEEL_IN_BUTTON).whileTrue(flywheelIn);
-    new JoystickButton(JOY0, FLYWHEEL_OUT_BUTTON).whileTrue(flywheelOut);
-    new JoystickButton(JOY0, ROTATOR1_BUTTON).whileTrue(rotator1);
-    new JoystickButton(JOY0, ROTATOR2_BUTTON).whileTrue(rotator2);
+    new JoystickButton(JOY0, INTAKE_BUTTON).whileTrue(intake_cmd);
+    new JoystickButton(JOY0, FLYWHEEL_BUTTON).whileTrue(flywheel_cmd);
+    new JoystickButton(JOY0, ROTATOR_BUTTON).whileTrue(rotator_cmd);
   }
 
   /**

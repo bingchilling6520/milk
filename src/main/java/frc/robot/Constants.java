@@ -38,19 +38,17 @@ public final class Constants {
     public static Joystick JOY0 = new Joystick(0);
 
     // Axis
-    public static int JOY0_Y = 0;
-    public static int JOY0_X = 1;
-    public static int JOY0_LEFT_Y = 0;
-    public static int JOY0_RIGHT_Y = 2;
+    //public static int JOY0_Y = 0;
+    //public static int JOY0_X = 1;
+    public static int JOY0_LEFT_Y = 1;
+    public static int JOY0_RIGHT_Y = 5;
     public static double JOY0_SENSE = 0.15;
 
     // Buttons
-    public static int INTAKE_IN_BUTTON = 0;
-    public static int INTAKE_OUT_BUTTON = 1;
-    public static int ROTATOR1_BUTTON = 2;
-    public static int ROTATOR2_BUTTON = 3;
-    public static int FLYWHEEL_IN_BUTTON = 4;
-    public static int FLYWHEEL_OUT_BUTTON = 5;
+    public static int REVERSE_BUTTON = 7;
+    public static int INTAKE_BUTTON = 5;
+    public static int ROTATOR_BUTTON = 8;
+    public static int FLYWHEEL_BUTTON = 6;
   }
 
   public static class SPEED {
@@ -59,8 +57,8 @@ public final class Constants {
     public static double DRIVEBASE_ROTATE_SPEED = 0.8;
   
     // Intake
-    public static double INTAKE_IN_SPD = 0.8;
-    public static double INTAKE_OUT_SPD = -0.8;
+    public static double INTAKE_IN_SPD = -0.7;
+    public static double INTAKE_OUT_SPD = 0.7;
 
     // Rotator
     public static double ROTATOR_SPD1 = 0.4;

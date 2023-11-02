@@ -28,16 +28,13 @@ public class DriveJoystick extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double linearSpeed = JOY0.getRawAxis(JOY0_Y);
-    double rotateSpeed = JOY0.getRawAxis(JOY0_X);
-    m_Drivebase.drive(linearSpeed, rotateSpeed);
-
-    // Or
-    /*
-    double leftSpeed = JOY0.getRawAxis(JOY0_LEFT_Y);
-    double rightSpeed = JOY0.getRawAxis(JOY0_RIGHT_Y);
+    //double linearSpeed = JOY0.getRawAxis(JOY0_Y);
+    //double rotateSpeed = JOY0.getRawAxis(JOY0_X);
+    //m_Drivebase.drive(linearSpeed, rotateSpeed);
+    
+    double leftSpeed = -JOY0.getRawAxis(JOY0_LEFT_Y);
+    double rightSpeed = -JOY0.getRawAxis(JOY0_RIGHT_Y);
     m_Drivebase.drive_manually(leftSpeed, rightSpeed);
-    */
   }
 
   // Called once the command ends or is interrupted.
