@@ -53,19 +53,19 @@ public final class Constants {
 
   public static class SPEED {
     // Drivebase
-    public static double DRIVEBASE_LINEAR_SPEED = 0.8;
-    public static double DRIVEBASE_ROTATE_SPEED = 0.8;
+    public static double DRIVEBASE_LINEAR_SPEED = 0.4;
+    public static double DRIVEBASE_ROTATE_SPEED = 0.4;
   
     // Intake
-    public static double INTAKE_IN_SPD = -0.7;
-    public static double INTAKE_OUT_SPD = 0.7;
+    public static double INTAKE_IN_SPD = -0.6;
+    public static double INTAKE_OUT_SPD = 0.6;
 
     // Rotator
-    public static double ROTATOR_SPD1 = 0.4;
-    public static double ROTATOR_SPD2 = -0.4;
+    public static double ROTATOR_SPD1 = 0.3;
+    public static double ROTATOR_SPD2 = -0.3;
 
     // Flywheel
-    public static double FLYWHEEL_IN = 0.4;
-    public static double FLYWHEEL_OUT = -0.4;
+    public static double FLYWHEEL_IN = 0.6;
+    public static double FLYWHEEL_OUT = -0.6;
   }
 }
