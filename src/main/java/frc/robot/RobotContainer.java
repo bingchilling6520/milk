@@ -31,11 +31,11 @@ public class RobotContainer {
   // Commands
   private Command intake_cmd = new StartEndCommand(
   () -> {
-    if (JOY0.getRawButtonPressed(REVERSE_BUTTON)) {
-      m_Intake.spin(INTAKE_OUT_SPD);
-    } else {
+    //if (JOY0.getRawButtonPressed(REVERSE_BUTTON)) {
+    //  m_Intake.spin(INTAKE_OUT_SPD);
+    //} else {
       m_Intake.spin(INTAKE_IN_SPD);
-    }
+    //}
   }, () -> {
     m_Intake.spin(0);
   }, m_Intake);

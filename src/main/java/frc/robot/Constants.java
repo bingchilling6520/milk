@@ -45,16 +45,16 @@ public final class Constants {
     public static double JOY0_SENSE = 0.15;
 
     // Buttons
-    public static int REVERSE_BUTTON = 7;
-    public static int INTAKE_BUTTON = 5;
-    public static int ROTATOR_BUTTON = 8;
-    public static int FLYWHEEL_BUTTON = 6;
+    public static int REVERSE_BUTTON = 1;//7;
+    public static int INTAKE_BUTTON = 4;//5;
+    public static int ROTATOR_BUTTON = 5;//8;
+    public static int FLYWHEEL_BUTTON = 3;//6;
   }
 
   public static class SPEED {
     // Drivebase
-    public static double DRIVEBASE_LINEAR_SPEED = 0.4;
-    public static double DRIVEBASE_ROTATE_SPEED = 0.4;
+    public static double DRIVEBASE_LINEAR_SPEED = 0.8;
+    public static double DRIVEBASE_ROTATE_SPEED = 0.8;
   
     // Intake
     public static double INTAKE_IN_SPD = -0.6;
@@ -65,7 +65,7 @@ public final class Constants {
     public static double ROTATOR_SPD2 = -0.3;
 
     // Flywheel
-    public static double FLYWHEEL_IN = 0.6;
-    public static double FLYWHEEL_OUT = -0.6;
+    public static double FLYWHEEL_IN = -0.6;
+    public static double FLYWHEEL_OUT = 0.6;
   }
 }
